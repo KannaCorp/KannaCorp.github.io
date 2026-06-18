@@ -1,103 +1,169 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="sr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Свето Писмо - Библија</title>
-<link rel="stylesheet" href="/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KannaCorp | Dragan Stanojković — Mobile Development</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6; color: #333; background-color: #f4f4f9;
+  }
+  .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+
+  /* ── Marketing ── */
+  header { text-align: center; margin-bottom: 40px; }
+  header h1 { color: #2c3e50; margin-bottom: 5px; font-size: 34px; }
+  header p { color: #555; }
+  .skills {
+    background: #fff; padding: 22px; border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); margin-bottom: 36px; text-align: center;
+  }
+  .skills h2 { color: #2c3e50; margin-bottom: 8px; }
+  .section-title { color: #2c3e50; margin-bottom: 18px; text-align: center; }
+  .app-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px; margin-bottom: 48px;
+  }
+  .card {
+    background: #fff; padding: 22px; border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); transition: transform 0.25s;
+  }
+  .card:hover { transform: translateY(-4px); }
+  .card h3 { color: #3498db; margin-bottom: 8px; }
+
+  .divider {
+    border: none; border-top: 2px solid #e0e0e8;
+    margin: 48px 0 36px;
+  }
+
+  /* ── Privacy policy ── */
+  .privacy h1 { color: #2c3e50; font-size: 26px; margin-bottom: 20px; }
+  .privacy h2 { color: #34495e; font-size: 20px; margin: 28px 0 10px; }
+  .privacy p { margin-bottom: 14px; }
+  .privacy ul { margin: 0 0 16px 24px; }
+  .privacy li { margin-bottom: 6px; }
+  .privacy a { color: #3498db; word-break: break-word; }
+
+  footer {
+    text-align: center; margin-top: 50px; padding-top: 24px;
+    border-top: 1px solid #ddd; font-size: 0.9em; color: #777;
+  }
+</style>
 </head>
+<body>
+<div class="container">
 
-<body>          
-        <div class="container">
-            <h1>Politika privatnosti za Sveto Pismo – Biblija</h1>
+  <!-- ═══════════ MARKETING / LANDING ═══════════ -->
+  <header>
+    <h1>KannaCorp</h1>
+    <p><strong>Dragan Stanojković</strong> · Android &amp; iOS Developer</p>
+  </header>
 
-<p>Na Svetom Pismu - Biblija, jedan od naših glavnih prioriteta je privatnost posetilaca. Ovaj dokument o politici privatnosti sadrži vrste informacija koje prikuplja i beleži Sveto Pismo - Biblija i kako ih koristimo.</p>
+  <section class="skills">
+    <h2>Technologies</h2>
+    <p>Flutter • Kotlin • Firebase • AdMob • AI Integration</p>
+  </section>
 
-<p>Ako imate dodatnih pitanja ili vam je potrebno više informacija o našoj politici privatnosti, ne oklevajte da nas kontaktirate.</p>
+  <section>
+    <h2 class="section-title">Applications</h2>
+    <div class="app-grid">
+      <div class="card">
+        <h3>Свето Писмо — Библија</h3>
+        <p>Свето Писмо на српском (Даничић–Караџић) са АИ тумачењем, Псалмима, Часословом и девтероканонским књигама.</p>
+      </div>
+      <div class="card">
+        <h3>KJV Bible &amp; AI Insights</h3>
+        <p>AI-powered KJV Bible study with daily verses and spiritual insights.</p>
+      </div>
+      <div class="card">
+        <h3>Dream Interpretation</h3>
+        <p>Advanced dream analysis powered by artificial intelligence.</p>
+      </div>
+    </div>
+  </section>
 
-<p>Ova Politika privatnosti se odnosi samo na naše onlajn aktivnosti i važi za posetioce naše veb stranice u vezi sa informacijama koje dele i/ili prikupljaju u Svetom Pismu - Biblija. Ove smernice se ne primenjuju ni na kakve informacije prikupljene van mreže ili putem drugih kanala osim ovog veb-sajta.</p>
+  <hr class="divider">
 
-<h2>Saglasnost</h2>
+  <!-- ═══════════ PRIVACY POLICY (Sveto Pismo - Biblija / Google Play) ═══════════ -->
+  <div class="privacy">
+    <h1>Politika privatnosti za Sveto Pismo – Biblija</h1>
 
-<p>Korišćenjem naše veb stranice, ovime se slažete sa našom Politikom privatnosti i saglasni ste sa njenim uslovima.</p>
+    <p>Na Svetom Pismu - Biblija, jedan od naših glavnih prioriteta je privatnost posetilaca. Ovaj dokument o politici privatnosti sadrži vrste informacija koje prikuplja i beleži Sveto Pismo - Biblija i kako ih koristimo.</p>
 
-<h2>Informacije koje prikupljamo</h2>
+    <p>Ako imate dodatnih pitanja ili vam je potrebno više informacija o našoj politici privatnosti, ne oklevajte da nas kontaktirate.</p>
 
-<p>Lični podaci koje se od vas traži i razlozi zbog kojih se od vas traži da ih dostavite biće vam jasni u trenutku kada tražimo od vas da dostavite svoje lične podatke.</p>
-<p>Ako nas kontaktirate direktno, možda ćemo dobiti dodatne informacije o vama kao što su vaše ime, adresa e-pošte, broj telefona, sadržaj poruke i/ili priloga koje nam možete poslati i sve druge informacije koje odlučite da nam pružite.</p>
-<p>Kada se registrujete za nalog, možda ćemo tražiti vaše kontakt informacije, uključujući stavke kao što su ime, naziv kompanije, adresa, adresa e-pošte i broj telefona.</p>
+    <p>Ova Politika privatnosti se odnosi samo na naše onlajn aktivnosti i važi za posetioce naše veb stranice u vezi sa informacijama koje dele i/ili prikupljaju u Svetom Pismu - Biblija. Ove smernice se ne primenjuju ni na kakve informacije prikupljene van mreže ili putem drugih kanala osim ovog veb-sajta.</p>
 
-<h2>Kako koristimo vaše informacije</h2>
+    <h2>Saglasnost</h2>
+    <p>Korišćenjem naše veb stranice, ovime se slažete sa našom Politikom privatnosti i saglasni ste sa njenim uslovima.</p>
 
-<p>Informacije koje prikupljamo koristimo na različite načine, uključujući za:</p>
+    <h2>Informacije koje prikupljamo</h2>
+    <p>Lični podaci koje se od vas traži i razlozi zbog kojih se od vas traži da ih dostavite biće vam jasni u trenutku kada tražimo od vas da dostavite svoje lične podatke.</p>
+    <p>Ako nas kontaktirate direktno, možda ćemo dobiti dodatne informacije o vama kao što su vaše ime, adresa e-pošte, broj telefona, sadržaj poruke i/ili priloga koje nam možete poslati i sve druge informacije koje odlučite da nam pružite.</p>
+    <p>Kada se registrujete za nalog, možda ćemo tražiti vaše kontakt informacije, uključujući stavke kao što su ime, naziv kompanije, adresa, adresa e-pošte i broj telefona.</p>
 
-<ul>
-<li>Obezbeđivanje, rad i održavanje naše veb stranice</li>
-<li>Poboljšajte, personalizujte i proširite našu veb lokaciju</li>
-<li>Shvatite i analizirajte kako koristite našu veb lokaciju</li>
-<li>Razvijanje novih proizvoda, usluga, funkcija i funkcionalnosti</li>
-<li>Komunicira sa vama, bilo direktno ili preko jednog od naših partnera, uključujući korisničku podršku, da vam pružimo ažuriranja i druge informacije u vezi sa veb-sajtom, kao i u marketinške i promotivne svrhe</li>
-<li>Šalji vam imejlove</li>
-<li>Pronađite i sprečite prevaru</li>
-</ul>
+    <h2>Kako koristimo vaše informacije</h2>
+    <p>Informacije koje prikupljamo koristimo na različite načine, uključujući za:</p>
+    <ul>
+      <li>Obezbeđivanje, rad i održavanje naše veb stranice</li>
+      <li>Poboljšajte, personalizujte i proširite našu veb lokaciju</li>
+      <li>Shvatite i analizirajte kako koristite našu veb lokaciju</li>
+      <li>Razvijanje novih proizvoda, usluga, funkcija i funkcionalnosti</li>
+      <li>Komunicira sa vama, bilo direktno ili preko jednog od naših partnera, uključujući korisničku podršku, da vam pružimo ažuriranja i druge informacije u vezi sa veb-sajtom, kao i u marketinške i promotivne svrhe</li>
+      <li>Šalji vam imejlove</li>
+      <li>Pronađite i sprečite prevaru</li>
+    </ul>
 
-<h2>Datoteke evidencije</h2>
+    <h2>Datoteke evidencije</h2>
+    <p>Sveto Pismo - Biblija prati standardnu proceduru korišćenja log fajlova. Ove datoteke evidentiraju posetioce kada posete veb lokacije. Sve hosting kompanije to rade i deo analitike hosting usluga. Informacije koje prikupljaju datoteke evidencije uključuju adrese internet protokola (IP), tip pretraživača, Internet provajdera (ISP), datum i vremensku oznaku, stranice za upućivanje/izlaz i eventualno broj klikova. Oni nisu povezani ni sa kakvim informacijama koje se mogu lično identifikovati. Svrha informacija je analiza trendova, upravljanje sajtom, praćenje kretanja korisnika na veb lokaciji i prikupljanje demografskih informacija.</p>
 
-<p>Sveto Pismo - Biblija prati standardnu proceduru korišćenja log fajlova. Ove datoteke evidentiraju posetioce kada posete veb lokacije. Sve hosting kompanije to rade i deo analitike hosting usluga. Informacije koje prikupljaju datoteke evidencije uključuju adrese internet protokola (IP), tip pretraživača, Internet provajdera (ISP), datum i vremensku oznaku, stranice za upućivanje/izlaz i eventualno broj klikova. Oni nisu povezani ni sa kakvim informacijama koje se mogu lično identifikovati. Svrha informacija je analiza trendova, upravljanje sajtom, praćenje kretanja korisnika na veb lokaciji i prikupljanje demografskih informacija.</p>
+    <h2>Google DoubleClick DART kolačić</h2>
+    <p>Google je jedan od dobavljača treće strane na našem sajtu. Takođe koristi kolačiće, poznate kao DART kolačići, za prikazivanje oglasa posetiocima našeg sajta na osnovu njihove posete i drugim sajtovima na internetu. Međutim, posetioci mogu da odluče da odbiju upotrebu DART kolačića tako što će posetiti politiku privatnosti Google oglasa i mreže sa medijskim sadržajem na sledećoj URL adresi – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 
+    <h2>Politika privatnosti partnera za oglašavanje</h2>
+    <p>Ovu listu možete pogledati da biste pronašli Politiku privatnosti za svakog od reklamnih partnera Svetog Pisma - Biblija.</p>
+    <p>Oglasni serveri ili oglasne mreže trećih strana koriste tehnologije kao što su kolačići, JavaScript ili veb-svetionici koji se koriste u njihovim odgovarajućim oglasima i vezama koje se pojavljuju na Svetom Pismu - Biblija, a koje se šalju direktno u pregledač korisnika. Oni automatski dobijaju vašu IP adresu kada se to dogodi. Ove tehnologije se koriste za merenje efikasnosti njihovih reklamnih kampanja i/ili za personalizaciju reklamnog sadržaja koji vidite na veb lokacijama koje posećujete.</p>
+    <p>Imajte na umu da Sveto Pismo - Biblija nema pristup niti kontrolu nad ovim kolačićima koje koriste nezavisni oglašivači.</p>
 
-<h2>Google DoubleClick DART kolačić</h2>
+    <h2>Politika privatnosti trećih strana</h2>
+    <p>Sveto Pismo - Biblija Politika privatnosti se ne primenjuje na druge oglašivače ili veb-sajtove. Stoga vam savetujemo da konsultujete odgovarajuću politiku privatnosti ovih nezavisnih servera oglasa za detaljnije informacije. Može uključivati njihove prakse i uputstva o tome kako da odustanu od određenih opcija.</p>
+    <p>Možete da izaberete da onemogućite kolačiće preko pojedinačnih opcija pregledača. Da biste saznali detaljnije informacije o upravljanju kolačićima u određenim veb pregledačima, možete ih pronaći na odgovarajućim veb lokacijama pregledača.</p>
 
-<p>Google je jedan od dobavljača treće strane na našem sajtu. Takođe koristi kolačiće, poznate kao DART kolačići, za prikazivanje oglasa posetiocima našeg sajta na osnovu njihove posete vvv.vebsite.com i drugim sajtovima na internetu. Međutim, posetioci mogu da odluče da odbiju upotrebu DART kolačića tako što će posetiti politiku privatnosti Google oglasa i mreže sa medijskim sadržajem na sledećoj URL adresi – <a href="https://policies.google.com/technologies/ads">https:/ /policies.google.com/technologies/ads</a></p>
+    <h2>CCPA prava na privatnost (nemojte prodavati moje lične podatke)</h2>
+    <p>Prema CCPA, između ostalih prava, potrošači iz Kalifornije imaju pravo na:</p>
+    <p>Zahtevajte da preduzeće koje prikuplja lične podatke potrošača otkrije kategorije i specifične delove ličnih podataka koje je preduzeće prikupilo o potrošačima.</p>
+    <p>Zahtev da preduzeće izbriše sve lične podatke o potrošaču kojeg je preduzeće prikupilo.</p>
+    <p>Zatražite da preduzeće koje prodaje lične podatke potrošača, a ne prodaje lične podatke potrošača.</p>
+    <p>Ako podnesete zahtev, imamo mesec dana da vam odgovorimo. Ako želite da iskoristite bilo koje od ovih prava, kontaktirajte nas.</p>
 
+    <h2>Prava na zaštitu podataka GDPR-a</h2>
+    <p>Želeli bismo da budemo sigurni da ste u potpunosti svesni svih svojih prava na zaštitu podataka. Svaki korisnik ima pravo na sledeće:</p>
+    <p>Pravo na pristup – Imate pravo da zahtevate kopije vaših ličnih podataka. Možda ćemo vam naplatiti malu naknadu za ovu uslugu.</p>
+    <p>Pravo na ispravku – Imate pravo da zahtevate da ispravimo sve informacije za koje smatrate da su netačne. Takođe imate pravo da zahtevate da dopunimo informacije za koje smatrate da su nepotpune.</p>
+    <p>Pravo na brisanje – Imate pravo da zahtevate da izbrišemo vaše lične podatke, pod određenim uslovima.</p>
+    <p>Pravo na ograničenje obrade – Imate pravo da zahtevate da ograničimo obradu vaših ličnih podataka, pod određenim uslovima.</p>
+    <p>Pravo na prigovor na obradu – Imate pravo da uložite prigovor na našu obradu vaših ličnih podataka, pod određenim uslovima.</p>
+    <p>Pravo na prenosivost podataka – Imate pravo da zahtevate da podatke koje smo prikupili prenesemo drugoj organizaciji ili direktno vama, pod određenim uslovima.</p>
+    <p>Ako podnesete zahtev, imamo mesec dana da vam odgovorimo. Ako želite da iskoristite bilo koje od ovih prava, kontaktirajte nas.</p>
 
-<h2>Politika privatnosti partnera za oglašavanje</h2>
+    <h2>Informacije za decu</h2>
+    <p>Drugi deo našeg prioriteta je zaštita dece dok koriste internet. Podstičemo roditelje i staratelje da posmatraju, učestvuju i/ili prate i vode svoje onlajn aktivnosti.</p>
+    <p>Sveto Pismo - Biblija svesno ne prikuplja nikakve lične podatke od dece mlađe od 13 godina. Ako mislite da je vaše dete dalo ovu vrstu informacija na našoj veb stranici, preporučujemo vam da nas odmah kontaktirate i mi ćemo se potruditi da odmah uklonimo takve informacije iz naše evidencije.</p>
 
-<p>Ovu listu možete pogledati da biste pronašli Politiku privatnosti za svakog od reklamnih partnera Svetog Pisma - Biblija.</p>
+    <h2>Promene ove politike privatnosti</h2>
+    <p>Možemo s vremena na vreme ažurirati našu politiku privatnosti. Stoga vam savetujemo da periodično pregledate ovu stranicu da biste videli bilo kakve promene. Obavestićemo vas o svim promenama objavljivanjem nove Politike privatnosti na ovoj stranici. Ove promene stupaju na snagu odmah, nakon što budu objavljene na ovoj stranici.</p>
 
-<p>Oglasni serveri ili oglasne mreže trećih strana koriste tehnologije kao što su kolačići, JavaScript ili veb-svetionici koji se koriste u njihovim odgovarajućim oglasima i vezama koje se pojavljuju na Svetom Pismu - Biblija, a koje se šalju direktno u pregledač korisnika. Oni automatski dobijaju vašu IP adresu kada se to dogodi. Ove tehnologije se koriste za merenje efikasnosti njihovih reklamnih kampanja i/ili za personalizaciju reklamnog sadržaja koji vidite na veb lokacijama koje posećujete.</p>
+    <h2>Kontaktirajte nas</h2>
+    <p>Ako imate bilo kakvih pitanja ili sugestija u vezi sa našom politikom privatnosti, ne ustručavajte se da nas kontaktirate na adresu <a href="mailto:dreaminterprets@gmail.com">dreaminterprets@gmail.com</a>.</p>
+  </div>
 
-<p>Imajte na umu da Sveto Pismo - Biblija nema pristup niti kontrolu nad ovim kolačićima koje koriste nezavisni oglašivači.</p>
+  <footer>
+    <p>Contact: dreaminterprets@gmail.com</p>
+    <p>&copy; 2026 Dragan Stanojkovic</p>
+  </footer>
 
-<h2>Politika privatnosti trećih strana</h2>
-
-<p>Sveto Pismo - Biblija Politika privatnosti se ne primenjuje na druge oglašivače ili veb-sajtove. Stoga vam savetujemo da konsultujete odgovarajuću politiku privatnosti ovih nezavisnih servera oglasa za detaljnije informacije. Može uključivati njihove prakse i uputstva o tome kako da odustanu od određenih opcija. </p>
-
-<p>Možete da izaberete da onemogućite kolačiće preko pojedinačnih opcija pregledača. Da biste saznali detaljnije informacije o upravljanju kolačićima u određenim veb pregledačima, možete ih pronaći na odgovarajućim veb lokacijama pregledača.</p>
-
-<h2>CCPA prava na privatnost (nemojte prodavati moje lične podatke)</h2>
-
-<p>Prema CCPA, između ostalih prava, potrošači iz Kalifornije imaju pravo na:</p>
-<p>Zahtevajte da preduzeće koje prikuplja lične podatke potrošača otkrije kategorije i specifične delove ličnih podataka koje je preduzeće prikupilo o potrošačima.</p>
-<p>Zahtev da preduzeće izbriše sve lične podatke a o potrošaču kojeg je preduzeće prikupilo.</p>
-<p>Zatražite da preduzeće koje prodaje lične podatke potrošača, a ne prodaje lične podatke potrošača.</p>
-<p>Ako podnesete zahtev, imamo mesec dana da vam odgovorimo. Ako želite da iskoristite bilo koje od ovih prava, kontaktirajte nas.</p>
-
-<h2>Prava na zaštitu podataka GDPR-a</h2>
-
-<p>Želeli bismo da budemo sigurni da ste u potpunosti svesni svih svojih prava na zaštitu podataka. Svaki korisnik ima pravo na sledeće:</p>
-<p>Pravo na pristup – Imate pravo da zahtevate kopije vaših ličnih podataka. Možda ćemo vam naplatiti malu naknadu za ovu uslugu.</p>
-<p>Pravo na ispravku – Imate pravo da zahtevate da ispravimo sve informacije za koje smatrate da su netačne. Takođe imate pravo da zahtevate da dopunimo informacije za koje smatrate da su nepotpune.</p>
-<p>Pravo na brisanje – Imate pravo da zahtevate da izbrišemo vaše lične podatke, pod određenim uslovima.</p>
-<p>Pravo na ograničenje obrade – Imate pravo da zahtevate da ograničimo obradu vaših ličnih podataka, pod određenim uslovima.</p>
-<p>Pravo na prigovor na obradu – Imate pravo da uložite prigovor na našu obradu vaših ličnih podataka, pod određenim uslovima.</p>
-<p>Pravo na prenosivost podataka – Imate pravo da zahtevate da podatke koje smo prikupili prenesemo drugoj organizaciji ili direktno vama, pod određenim uslovima.</p>
-<p>Ako podnesete zahtev, imamo mesec dana da vam odgovorimo. Ako želite da iskoristite bilo koje od ovih prava, kontaktirajte nas.</p>
-
-<h2>Informacije za decu</h2>
-
-<p>Drugi deo našeg prioriteta je zaštita dece dok koriste internet. Podstičemo roditelje i staratelje da posmatraju, učestvuju i/ili prate i vode svoje onlajn aktivnosti.</p>
-
-<p>Sveto Pismo - Biblija svesno ne prikuplja nikakve lične podatke od dece mlađe od 13 godina. Ako mislite da je vaše dete dalo ovu vrstu informacija na našoj veb stranici, preporučujemo vam da nas odmah kontaktirate i mi ćemo se potruditi da odmah uklonimo takve informacije iz naše evidencije.</p>
-
-<h2>Promene ove politike privatnosti</h2>
-
-<p>Možemo s vremena na vreme ažurirati našu politiku privatnosti. Stoga vam savetujemo da periodično pregledate ovu stranicu da biste videli bilo kakve promene. Obavestićemo vas o svim promenama objavljivanjem nove Politike privatnosti na ovoj stranici. Ove promene stupaju na snagu odmah, nakon što budu objavljene na ovoj stranici.</p>
-
-<h2>Kontaktirajte nas</h2>
-
-<p>Ako imate bilo kakvih pitanja ili sugestija u vezi sa našom politikom privatnosti, ne ustručavajte se da nas kontaktirate na adresu dreaminterprets@gmail.com.</p>
-        </div>
+</div>
 </body>
 </html>
