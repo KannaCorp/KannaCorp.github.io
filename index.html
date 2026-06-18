@@ -1,99 +1,184 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KannaCorp | Dragan Stanojković — Mobile Development</title>
+<title>KannaCorp | Dragan Stanojković — Mobile Apps</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; color: #333; background-color: #f4f4f9;
+    line-height: 1.6; color: #2c3e50;
+    background: linear-gradient(160deg, #eef2f7 0%, #f4f4f9 100%);
   }
-  .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+  .container { max-width: 960px; margin: auto; padding: 48px 20px; }
 
-  /* ── Marketing ── */
-  header { text-align: center; margin-bottom: 40px; }
-  header h1 { color: #2c3e50; margin-bottom: 5px; font-size: 34px; }
-  header p { color: #555; }
-  .skills {
-    background: #fff; padding: 22px; border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08); margin-bottom: 36px; text-align: center;
+  /* Header */
+  header { text-align: center; margin-bottom: 48px; }
+  header h1 { color: #1a2533; font-size: 40px; margin-bottom: 8px; letter-spacing: -0.5px; }
+  header .tagline { color: #5a6b7b; font-size: 18px; }
+  .tech {
+    display: inline-block; margin-top: 18px; padding: 10px 22px;
+    background: #fff; border-radius: 30px; font-size: 14px; color: #5a6b7b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
-  .skills h2 { color: #2c3e50; margin-bottom: 8px; }
-  .section-title { color: #2c3e50; margin-bottom: 18px; text-align: center; }
+
+  /* Store sections */
+  .store-section { margin-bottom: 48px; }
+  .store-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #dde3ea;
+  }
+  .store-header h2 { font-size: 22px; color: #1a2533; }
+  .store-badge {
+    font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; color: #fff;
+  }
+  .badge-play { background: #34a853; }
+  .badge-apple { background: #0a84ff; }
+
+  /* App grid */
   .app-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px; margin-bottom: 48px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
   }
-  .card {
-    background: #fff; padding: 22px; border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08); transition: transform 0.25s;
+  .app-card {
+    display: flex; align-items: center; gap: 14px;
+    background: #fff; padding: 16px; border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none; color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .card:hover { transform: translateY(-4px); }
-  .card h3 { color: #3498db; margin-bottom: 8px; }
+  .app-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+  .app-icon {
+    width: 56px; height: 56px; border-radius: 13px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 700; color: #fff;
+  }
+  .app-icon img { width: 100%; height: 100%; border-radius: 13px; object-fit: cover; }
+  .app-info { min-width: 0; }
+  .app-info .name { font-weight: 600; font-size: 15px; color: #1a2533; }
+  .app-info .desc { font-size: 13px; color: #7a8a99; }
+  .app-arrow { margin-left: auto; color: #b0bcc8; font-size: 18px; flex-shrink: 0; }
 
-  .divider {
-    border: none; border-top: 2px solid #e0e0e8;
-    margin: 48px 0 36px;
-  }
+  /* Icon colors (placeholder dok ne dodas slike) */
+  .c-bible   { background: linear-gradient(135deg,#8b1a1a,#c14545); }
+  .c-bible2  { background: linear-gradient(135deg,#6b4423,#a0703f); }
+  .c-dream   { background: linear-gradient(135deg,#4a4ae0,#7b6bd8); }
+  .c-dream2  { background: linear-gradient(135deg,#5b3a8b,#8a5fc1); }
+  .c-guitar  { background: linear-gradient(135deg,#1a7a5e,#3aa888); }
+  .c-kjv     { background: linear-gradient(135deg,#2c3e50,#4a6278); }
 
-  /* ── Privacy policy ── */
-  .privacy h1 { color: #2c3e50; font-size: 26px; margin-bottom: 20px; }
-  .privacy h2 { color: #34495e; font-size: 20px; margin: 28px 0 10px; }
-  .privacy p { margin-bottom: 14px; }
-  .privacy ul { margin: 0 0 16px 24px; }
-  .privacy li { margin-bottom: 6px; }
-  .privacy a { color: #3498db; word-break: break-word; }
+  .divider { border: none; border-top: 2px solid #dde3ea; margin: 48px 0 36px; }
 
-  footer {
-    text-align: center; margin-top: 50px; padding-top: 24px;
-    border-top: 1px solid #ddd; font-size: 0.9em; color: #777;
-  }
+  /* Privacy */
+  .privacy { background: #fff; padding: 32px 28px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .privacy h1 { color: #1a2533; font-size: 24px; margin-bottom: 18px; }
+  .privacy h2 { color: #34495e; font-size: 18px; margin: 24px 0 10px; }
+  .privacy p { margin-bottom: 13px; color: #44515e; }
+  .privacy ul { margin: 0 0 14px 22px; }
+  .privacy li { margin-bottom: 6px; color: #44515e; }
+  .privacy a { color: #0a84ff; word-break: break-word; }
+
+  footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #dde3ea; font-size: 14px; color: #7a8a99; }
 </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- ═══════════ MARKETING / LANDING ═══════════ -->
+  <!-- HEADER -->
   <header>
     <h1>KannaCorp</h1>
-    <p><strong>Dragan Stanojković</strong> · Android &amp; iOS Developer</p>
+    <p class="tagline"><strong>Dragan Stanojković</strong> · Android &amp; iOS Developer</p>
+    <div class="tech">Flutter • Kotlin • Firebase • AdMob • AI Integration</div>
   </header>
 
-  <section class="skills">
-    <h2>Technologies</h2>
-    <p>Flutter • Kotlin • Firebase • AdMob • AI Integration</p>
+  <!-- GOOGLE PLAY -->
+  <section class="store-section">
+    <div class="store-header">
+      <h2>Google Play</h2>
+      <span class="store-badge badge-play">Android</span>
+    </div>
+    <div class="app-grid">
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.kanna.bible" target="_blank">
+        <div class="app-icon"><img src="icons/bible.png" alt="Bible"></div>
+        <div class="app-info"><div class="name">Bible</div><div class="desc">AI-powered Bible study</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.kanna.biblija" target="_blank">
+        <div class="app-icon"><img src="icons/sveto_pismo.png" alt="Sveto Pismo"></div>
+        <div class="app-info"><div class="name">Biblija - Sveto Pismo</div><div class="desc">Свето Писмо на српском</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.kanna.dreaminterpretation" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Dream Interpretation"></div>
+        <div class="app-info"><div class="name">Dream Interpretation</div><div class="desc">AI dream analysis</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.kanna.sanjarica2" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Sanovnik"></div>
+        <div class="app-info"><div class="name">Sanovnik</div><div class="desc">AI tumačenje snova</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.kannacorp.interprtationdesreves" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Interpretation des reves"></div>
+        <div class="app-info"><div class="name">Interprétation des rêves</div><div class="desc">Analyse des rêves par IA</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.kanna.traumdeutung" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Traumdeutung"></div>
+        <div class="app-info"><div class="name">Traumdeutung</div><div class="desc">KI-Traumanalyse</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.learn.playermedia" target="_blank">
+        <div class="app-icon"><img src="icons/guitar_intros.png" alt="Guitar Intros"></div>
+        <div class="app-info"><div class="name">Guitar Intros</div><div class="desc">Learn guitar intros</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+    </div>
   </section>
 
-  <section>
-    <h2 class="section-title">Applications</h2>
+  <!-- APP STORE -->
+  <section class="store-section">
+    <div class="store-header">
+      <h2>App Store</h2>
+      <span class="store-badge badge-apple">iOS</span>
+    </div>
     <div class="app-grid">
-      <div class="card">
-        <h3>Свето Писмо — Библија</h3>
-        <p>Свето Писмо на српском (Даничић–Караџић) са АИ тумачењем, Псалмима, Часословом и девтероканонским књигама.</p>
-      </div>
-      <div class="card">
-        <h3>KJV Bible &amp; AI Insights</h3>
-        <p>AI-powered KJV Bible study with daily verses and spiritual insights.</p>
-      </div>
-      <div class="card">
-        <h3>Dream Interpretation</h3>
-        <p>Advanced dream analysis powered by artificial intelligence.</p>
-      </div>
+      <a class="app-card" href="https://apps.apple.com/app/id6780591405" target="_blank">
+        <div class="app-icon"><img src="icons/sveto_pismo.png" alt="Sveto Pismo"></div>
+        <div class="app-info"><div class="name">Biblija - Sveto Pismo</div><div class="desc">Свето Писмо на српском</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/app/id6779939039" target="_blank">
+        <div class="app-icon"><img src="icons/bible.png" alt="KJV Bible"></div>
+        <div class="app-info"><div class="name">KJV Bible &amp; AI Insights</div><div class="desc">AI-powered KJV study</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/app/id6780211870" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Dream Interpreter"></div>
+        <div class="app-info"><div class="name">Dream Interpreter &amp; AI</div><div class="desc">AI dream analysis</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/app/id6780272562" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Sanovnik"></div>
+        <div class="app-info"><div class="name">Sanovnik &amp; AI</div><div class="desc">AI tumačenje snova</div></div>
+        <span class="app-arrow">→</span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/app/id6780288676" target="_blank">
+        <div class="app-icon"><img src="icons/dream_interpretation.png" alt="Interpretation des reves"></div>
+        <div class="app-info"><div class="name">Interprétation des rêves &amp; AI</div><div class="desc">Analyse des rêves par IA</div></div>
+        <span class="app-arrow">→</span>
+      </a>
     </div>
   </section>
 
   <hr class="divider">
 
-  <!-- ═══════════ PRIVACY POLICY (Sveto Pismo - Biblija / Google Play) ═══════════ -->
+  <!-- PRIVACY POLICY (Sveto Pismo - Biblija / Google Play) -->
   <div class="privacy">
     <h1>Politika privatnosti za Sveto Pismo – Biblija</h1>
 
     <p>Na Svetom Pismu - Biblija, jedan od naših glavnih prioriteta je privatnost posetilaca. Ovaj dokument o politici privatnosti sadrži vrste informacija koje prikuplja i beleži Sveto Pismo - Biblija i kako ih koristimo.</p>
-
     <p>Ako imate dodatnih pitanja ili vam je potrebno više informacija o našoj politici privatnosti, ne oklevajte da nas kontaktirate.</p>
-
     <p>Ova Politika privatnosti se odnosi samo na naše onlajn aktivnosti i važi za posetioce naše veb stranice u vezi sa informacijama koje dele i/ili prikupljaju u Svetom Pismu - Biblija. Ove smernice se ne primenjuju ni na kakve informacije prikupljene van mreže ili putem drugih kanala osim ovog veb-sajta.</p>
 
     <h2>Saglasnost</h2>
@@ -120,48 +205,35 @@
     <p>Sveto Pismo - Biblija prati standardnu proceduru korišćenja log fajlova. Ove datoteke evidentiraju posetioce kada posete veb lokacije. Sve hosting kompanije to rade i deo analitike hosting usluga. Informacije koje prikupljaju datoteke evidencije uključuju adrese internet protokola (IP), tip pretraživača, Internet provajdera (ISP), datum i vremensku oznaku, stranice za upućivanje/izlaz i eventualno broj klikova. Oni nisu povezani ni sa kakvim informacijama koje se mogu lično identifikovati. Svrha informacija je analiza trendova, upravljanje sajtom, praćenje kretanja korisnika na veb lokaciji i prikupljanje demografskih informacija.</p>
 
     <h2>Google DoubleClick DART kolačić</h2>
-    <p>Google je jedan od dobavljača treće strane na našem sajtu. Takođe koristi kolačiće, poznate kao DART kolačići, za prikazivanje oglasa posetiocima našeg sajta na osnovu njihove posete i drugim sajtovima na internetu. Međutim, posetioci mogu da odluče da odbiju upotrebu DART kolačića tako što će posetiti politiku privatnosti Google oglasa i mreže sa medijskim sadržajem na sledećoj URL adresi – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+    <p>Google je jedan od dobavljača treće strane na našem sajtu. Takođe koristi kolačiće, poznate kao DART kolačići, za prikazivanje oglasa posetiocima našeg sajta na osnovu njihove posete i drugim sajtovima na internetu. Posetioci mogu da odbiju upotrebu DART kolačića posetom politici privatnosti Google oglasa na – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 
     <h2>Politika privatnosti partnera za oglašavanje</h2>
-    <p>Ovu listu možete pogledati da biste pronašli Politiku privatnosti za svakog od reklamnih partnera Svetog Pisma - Biblija.</p>
-    <p>Oglasni serveri ili oglasne mreže trećih strana koriste tehnologije kao što su kolačići, JavaScript ili veb-svetionici koji se koriste u njihovim odgovarajućim oglasima i vezama koje se pojavljuju na Svetom Pismu - Biblija, a koje se šalju direktno u pregledač korisnika. Oni automatski dobijaju vašu IP adresu kada se to dogodi. Ove tehnologije se koriste za merenje efikasnosti njihovih reklamnih kampanja i/ili za personalizaciju reklamnog sadržaja koji vidite na veb lokacijama koje posećujete.</p>
+    <p>Oglasni serveri ili oglasne mreže trećih strana koriste tehnologije kao što su kolačići, JavaScript ili veb-svetionici koji se koriste u njihovim oglasima i vezama koje se pojavljuju na Svetom Pismu - Biblija, a koje se šalju direktno u pregledač korisnika. Oni automatski dobijaju vašu IP adresu kada se to dogodi. Ove tehnologije se koriste za merenje efikasnosti reklamnih kampanja i/ili personalizaciju reklamnog sadržaja koji vidite.</p>
     <p>Imajte na umu da Sveto Pismo - Biblija nema pristup niti kontrolu nad ovim kolačićima koje koriste nezavisni oglašivači.</p>
 
     <h2>Politika privatnosti trećih strana</h2>
-    <p>Sveto Pismo - Biblija Politika privatnosti se ne primenjuje na druge oglašivače ili veb-sajtove. Stoga vam savetujemo da konsultujete odgovarajuću politiku privatnosti ovih nezavisnih servera oglasa za detaljnije informacije. Može uključivati njihove prakse i uputstva o tome kako da odustanu od određenih opcija.</p>
-    <p>Možete da izaberete da onemogućite kolačiće preko pojedinačnih opcija pregledača. Da biste saznali detaljnije informacije o upravljanju kolačićima u određenim veb pregledačima, možete ih pronaći na odgovarajućim veb lokacijama pregledača.</p>
+    <p>Sveto Pismo - Biblija Politika privatnosti se ne primenjuje na druge oglašivače ili veb-sajtove. Savetujemo vam da konsultujete odgovarajuću politiku privatnosti ovih nezavisnih servera oglasa za detaljnije informacije.</p>
+    <p>Možete da onemogućite kolačiće preko pojedinačnih opcija pregledača. Detaljnije informacije o upravljanju kolačićima možete pronaći na veb lokacijama pregledača.</p>
 
     <h2>CCPA prava na privatnost (nemojte prodavati moje lične podatke)</h2>
-    <p>Prema CCPA, između ostalih prava, potrošači iz Kalifornije imaju pravo na:</p>
-    <p>Zahtevajte da preduzeće koje prikuplja lične podatke potrošača otkrije kategorije i specifične delove ličnih podataka koje je preduzeće prikupilo o potrošačima.</p>
-    <p>Zahtev da preduzeće izbriše sve lične podatke o potrošaču kojeg je preduzeće prikupilo.</p>
-    <p>Zatražite da preduzeće koje prodaje lične podatke potrošača, a ne prodaje lične podatke potrošača.</p>
-    <p>Ako podnesete zahtev, imamo mesec dana da vam odgovorimo. Ako želite da iskoristite bilo koje od ovih prava, kontaktirajte nas.</p>
+    <p>Prema CCPA, između ostalih prava, potrošači iz Kalifornije imaju pravo da: zatraže otkrivanje kategorija i specifičnih delova ličnih podataka koje preduzeće prikuplja; zatraže brisanje ličnih podataka; odbiju prodaju ličnih podataka. Ako podnesete zahtev, imamo mesec dana da vam odgovorimo.</p>
 
     <h2>Prava na zaštitu podataka GDPR-a</h2>
-    <p>Želeli bismo da budemo sigurni da ste u potpunosti svesni svih svojih prava na zaštitu podataka. Svaki korisnik ima pravo na sledeće:</p>
-    <p>Pravo na pristup – Imate pravo da zahtevate kopije vaših ličnih podataka. Možda ćemo vam naplatiti malu naknadu za ovu uslugu.</p>
-    <p>Pravo na ispravku – Imate pravo da zahtevate da ispravimo sve informacije za koje smatrate da su netačne. Takođe imate pravo da zahtevate da dopunimo informacije za koje smatrate da su nepotpune.</p>
-    <p>Pravo na brisanje – Imate pravo da zahtevate da izbrišemo vaše lične podatke, pod određenim uslovima.</p>
-    <p>Pravo na ograničenje obrade – Imate pravo da zahtevate da ograničimo obradu vaših ličnih podataka, pod određenim uslovima.</p>
-    <p>Pravo na prigovor na obradu – Imate pravo da uložite prigovor na našu obradu vaših ličnih podataka, pod određenim uslovima.</p>
-    <p>Pravo na prenosivost podataka – Imate pravo da zahtevate da podatke koje smo prikupili prenesemo drugoj organizaciji ili direktno vama, pod određenim uslovima.</p>
-    <p>Ako podnesete zahtev, imamo mesec dana da vam odgovorimo. Ako želite da iskoristite bilo koje od ovih prava, kontaktirajte nas.</p>
+    <p>Svaki korisnik ima pravo na: pristup podacima, ispravku, brisanje, ograničenje obrade, prigovor na obradu i prenosivost podataka. Ako podnesete zahtev, imamo mesec dana da vam odgovorimo.</p>
 
     <h2>Informacije za decu</h2>
-    <p>Drugi deo našeg prioriteta je zaštita dece dok koriste internet. Podstičemo roditelje i staratelje da posmatraju, učestvuju i/ili prate i vode svoje onlajn aktivnosti.</p>
-    <p>Sveto Pismo - Biblija svesno ne prikuplja nikakve lične podatke od dece mlađe od 13 godina. Ako mislite da je vaše dete dalo ovu vrstu informacija na našoj veb stranici, preporučujemo vam da nas odmah kontaktirate i mi ćemo se potruditi da odmah uklonimo takve informacije iz naše evidencije.</p>
+    <p>Zaštita dece dok koriste internet nam je prioritet. Podstičemo roditelje i staratelje da prate njihove onlajn aktivnosti. Sveto Pismo - Biblija svesno ne prikuplja lične podatke od dece mlađe od 13 godina. Ako mislite da je vaše dete dalo ovu vrstu informacija, kontaktirajte nas i uklonićemo takve informacije.</p>
 
     <h2>Promene ove politike privatnosti</h2>
-    <p>Možemo s vremena na vreme ažurirati našu politiku privatnosti. Stoga vam savetujemo da periodično pregledate ovu stranicu da biste videli bilo kakve promene. Obavestićemo vas o svim promenama objavljivanjem nove Politike privatnosti na ovoj stranici. Ove promene stupaju na snagu odmah, nakon što budu objavljene na ovoj stranici.</p>
+    <p>Možemo s vremena na vreme ažurirati našu politiku privatnosti. Savetujemo vam da periodično pregledate ovu stranicu. Promene stupaju na snagu odmah nakon objavljivanja.</p>
 
     <h2>Kontaktirajte nas</h2>
-    <p>Ako imate bilo kakvih pitanja ili sugestija u vezi sa našom politikom privatnosti, ne ustručavajte se da nas kontaktirate na adresu <a href="mailto:dreaminterprets@gmail.com">dreaminterprets@gmail.com</a>.</p>
+    <p>Ako imate pitanja ili sugestija u vezi sa našom politikom privatnosti, kontaktirajte nas na <a href="mailto:dreaminterprets@gmail.com">dreaminterprets@gmail.com</a>.</p>
   </div>
 
   <footer>
     <p>Contact: dreaminterprets@gmail.com</p>
-    <p>&copy; 2026 Dragan Stanojkovic</p>
+    <p>&copy; 2026 Dragan Stanojković · KannaCorp</p>
   </footer>
 
 </div>
